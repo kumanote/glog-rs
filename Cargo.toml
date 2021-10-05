@@ -1,0 +1,26 @@
+[package]
+name = "glog"
+version = "0.1.0"
+authors = ["Hiroki Tanaka <support@kumano-te.com>"]
+license = "MIT"
+edition = "2018"
+description = "Rust implementation of Google log formatted logger."
+repository = "https://github.com/kumanote/glog-rs"
+readme = "README.md"
+keywords = ["glog", "log", "logging", "logger"]
+
+[dependencies]
+# use this line to change verbosity
+slog = { version = "2.7.0", features = ["max_level_trace", "release_max_level_debug"] }
+slog-async = "2.7.0"
+slog-envlogger = "2.2.0"
+slog-scope = "4.4.0"
+slog-term = "2.8.0"
+chrono = "0.4.19"
+thread-id = "4.0.0"
+itertools = "0.10.1"
+lazy_static = "1.4.0"
+
+[dev-dependencies]
+rand = "0.6.5"
+regex = { version = "1.3.0", default-features = false, features = ["std", "perf"] }
